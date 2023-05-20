@@ -6,7 +6,7 @@ import axios from 'axios';
 // import widget as custom components
 import { PageHeading } from 'widgets'
 
-const r2n = () => {
+const R2N = () => {
   const [processing, setProcessing] = useState(null);
   const [output, setOutput] = useState(null);
   const [file, setFile] = useState(null);
@@ -199,4 +199,4 @@ const r2n = () => {
   )
 }
 
-export default r2n
+export default R2N
