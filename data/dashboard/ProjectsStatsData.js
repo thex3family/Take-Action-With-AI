@@ -15,7 +15,7 @@ export const ProjectsStats = [
     },
     {
         id:2,
-        title : "Active Task",
+        title : "Tasks",
         value : 132,
         icon: <ListTask size={18}/>,
         statInfo: '<span className="text-dark me-2">28</span> Completed' 
