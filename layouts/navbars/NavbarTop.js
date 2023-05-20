@@ -24,15 +24,15 @@ const NavbarTop = (props) => {
 					</Link>
 					<div className="ms-lg-3 d-none d-md-none d-lg-block">
 						{/* Search Form */}
-						<Form className="d-flex align-items-center">
+						{/* <Form className="d-flex align-items-center">
 							<Form.Control type="search" placeholder="Search" />
-						</Form>
+						</Form> */}
 					</div>
 				</div>
 				{/* Quick Menu */}
-				<Nav className="navbar-right-wrap ms-2 d-flex nav-top-wrap">
+				{/* <Nav className="navbar-right-wrap ms-2 d-flex nav-top-wrap">
 					<QuickMenu />
-				</Nav>
+				</Nav> */}
 			</div>
 		</Navbar>
 	);
