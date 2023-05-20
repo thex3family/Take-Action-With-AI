@@ -11,14 +11,14 @@ const R2N = () => {
   const [output, setOutput] = useState(null);
   const [file, setFile] = useState(null);
   const [openAI_Key, setOpenAI_Key] = useState(null);
-  const [title, setTitle] = useState(null);
-  const [summary, setSummary] = useState(null);
-  const [sentiment, setSentiment] = useState(null);
-  const [main_points, setMain_Points] = useState(null);
-  const [action_items, setAction_Items] = useState(null);
-  const [transcript_arguments, setTranscript_Arguments] = useState(null);
-  const [follow_up, setFollow_Up] = useState(null);
-  const [related_topics, setRelated_Topics] = useState(null);
+  const [title, setTitle] = useState(true);
+  const [summary, setSummary] = useState(true);
+  const [sentiment, setSentiment] = useState(false);
+  const [main_points, setMain_Points] = useState(false);
+  const [action_items, setAction_Items] = useState(false);
+  const [transcript_arguments, setTranscript_Arguments] = useState(false);
+  const [follow_up, setFollow_Up] = useState(false);
+  const [related_topics, setRelated_Topics] = useState(false);
   const [custom_prompt, setCustom_Prompt] = useState(null);
   const [error, setError] = useState(null);
 
@@ -90,11 +90,11 @@ const R2N = () => {
                   <Form.Label as={Col} md={3} htmlFor="default">Settings</Form.Label>
                   <Col md={8} xs={12}>
                     <Form.Check id="title">
-                      <Form.Check.Input type="checkbox" name="title" onChange={(e) => setTitle(e.target.checked)} />
+                      <Form.Check.Input type="checkbox" name="title" onChange={(e) => setTitle(e.target.checked)} checked={title} disabled/>
                       <Form.Check.Label>Title</Form.Check.Label>
                     </Form.Check>
                     <Form.Check id="summary">
-                      <Form.Check.Input type="checkbox" name="summary" onChange={(e) => setSummary(e.target.checked)} />
+                      <Form.Check.Input type="checkbox" name="summary" onChange={(e) => setSummary(e.target.checked)} checked={summary} disabled/>
                       <Form.Check.Label>Summary</Form.Check.Label>
                     </Form.Check>
                     <Form.Check id="sentiment">
@@ -124,7 +124,7 @@ const R2N = () => {
                   <label htmlFor="openai_key" className="col-sm-3 col-form-label
                     form-label">OpenAI Key</label>
                   <div className="col-md-8 col-12">
-                    <input className="form-control" placeholder="sk-..." id="open
+                    <input className="form-control" type="password" placeholder="sk-•••" id="open
                     ai_key" required onChange={(e) => setOpenAI_Key(e.target.value)} />
                   </div>
                   <Col md={{ offset: 3, span: 8 }} xs={12} className="mt-4">
