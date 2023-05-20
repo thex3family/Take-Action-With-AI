@@ -68,7 +68,7 @@ const ActiveProjects = () => {
                         </tbody>
                     </Table>
                     <Card.Footer className="bg-white text-center">
-                        <Link href="#" className="link-primary">View All Projects</Link>
+                        <Link target="_blank" href="https://x3.family?utm_source=takeactionapp" className="link-primary">View All Projects</Link>
                     </Card.Footer>
                 </Card>
             </Col>

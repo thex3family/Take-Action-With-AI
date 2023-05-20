@@ -11,7 +11,6 @@ export const ActiveProjectsData = [
        members:[
         {image:'images/avatar/avatar-1.jpg'},
         {image:'images/avatar/avatar-2.jpg'},
-        {image:'images/avatar/avatar-3.jpg'}
        ] 
     },
     // {

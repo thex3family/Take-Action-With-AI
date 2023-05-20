@@ -32,7 +32,7 @@ export const DashboardMenu = [
 	{
 		id: uuid(),
 		title: 'Recording -> Notes',
-		icon: 'home',
+		icon: 'phone',
 		link: '/pages/r2n'
 	},
 	// {

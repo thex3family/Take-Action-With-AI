@@ -23,7 +23,7 @@ const Home = () => {
                         <div>
                             <div className="d-flex justify-content-between align-items-center">
                                 <div className="mb-2 mb-lg-0">
-                                    <h3 className="mb-0  text-white">Impact Projects</h3>
+                                    <h3 className="mb-0  text-white">Take Action With AI</h3>
                                 </div>
                                 <div>
                                     <Link href="#" className="btn btn-white">Create New Project</Link>
@@ -33,7 +33,7 @@ const Home = () => {
                     </Col>
                     {ProjectsStatsData.map((item, index) => {
                         return (
-                            <Col xl={3} lg={6} md={12} xs={12} className="mt-6" key={index}>
+                            <Col xl={6} lg={6} md={12} xs={12} className="mt-6" key={index}>
                                 <StatRightTopIcon info={item} />
                             </Col>
                         )

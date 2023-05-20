@@ -1,6 +1,6 @@
 // import node module libraries
 import { useState } from 'react';
-import { Col, Row, Container, Button, Card, Spinner, Form } from 'react-bootstrap';
+import { Col, Row, Container, Button, Card, Spinner, Form, Alert } from 'react-bootstrap';
 import axios from 'axios';
 
 // import widget as custom components
@@ -20,12 +20,14 @@ const R2N = () => {
   const [follow_up, setFollow_Up] = useState(null);
   const [related_topics, setRelated_Topics] = useState(null);
   const [custom_prompt, setCustom_Prompt] = useState(null);
+  const [error, setError] = useState(null);
 
   const handleFileUpload = (event) => {
     setFile(event.target.files[0]);
   }
 
   const handleUpload = async () => {
+    setError(null);
     setProcessing(true);
     const formData = new FormData();
     formData.append('file', file);
@@ -47,10 +49,10 @@ const R2N = () => {
         }
       });
 
-      console.log(response.data);
       setOutput(response.data);
     } catch (error) {
-      console.error(error);
+      console.log(error);
+      setError(error.message);
     } finally {
       setProcessing(false);
     }
@@ -131,7 +133,8 @@ const R2N = () => {
                 </Row>
                 <Row>
                   <Col md={6} className="d-grid gap-2 mx-auto">
-                    <Button variant="primary"
+                  { error ? <Alert variant="primary" >Error: {error}. Please try again.</Alert> : null}
+                    <Button variant="primary text-white"
                       onClick={handleUpload}
                       disabled={processing || (!file || !openAI_Key)}
                     >
