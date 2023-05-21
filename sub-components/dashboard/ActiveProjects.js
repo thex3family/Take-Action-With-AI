@@ -68,7 +68,7 @@ const ActiveProjects = () => {
                         </tbody>
                     </Table>
                     <Card.Footer className="bg-white text-center">
-                        <Link target="_blank" href="https://x3.family?utm_source=takeactionapp" className="link-primary">View All Projects</Link>
+                        <Link target="_blank" href="https://thex3family.notion.site/Co-x3-Impact-Projects-9806353246cb40b4ae2a84ada8e5c7a1" className="link-primary">View All Projects</Link>
                     </Card.Footer>
                 </Card>
             </Col>

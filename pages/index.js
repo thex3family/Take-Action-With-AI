@@ -26,7 +26,7 @@ const Home = () => {
                                     <h3 className="mb-0  text-white">Take Action With AI</h3>
                                 </div>
                                 <div>
-                                    <Link href="#" className="btn btn-white">Create New Project</Link>
+                                    <Link href="https://thex3family.notion.site/Co-x3-Impact-Projects-9806353246cb40b4ae2a84ada8e5c7a1" className="btn btn-white">Create New Project</Link>
                                 </div>
                             </div>
                         </div>
