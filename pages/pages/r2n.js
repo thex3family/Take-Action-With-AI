@@ -29,6 +29,7 @@ const R2N = () => {
   const handleUpload = async () => {
     setError(null);
     setProcessing(true);
+    console.log('Checkbox - ', title, summary, sentiment, main_points, action_items, transcript_arguments, follow_up, related_topics, custom_prompt);
     const formData = new FormData();
     formData.append('file', file);
     formData.append('openAI_key', openAI_Key);
@@ -43,7 +44,7 @@ const R2N = () => {
     formData.append('custom_prompt', custom_prompt);
 
     try {
-      const response = await axios.post('http://54.151.178.103:8652/upload', formData, {
+      const response = await axios.post('https://13.213.171.136:8652/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -98,26 +99,30 @@ const R2N = () => {
                       <Form.Check.Label>Summary</Form.Check.Label>
                     </Form.Check>
                     <Form.Check id="sentiment">
-                      <Form.Check.Input type="checkbox" name="sentiment" onChange={(e) => setSentiment(e.target.checked)} />
+                      <Form.Check.Input type="checkbox" name="sentiment" onChange={(e) => setSentiment(e.target.checked)} checked={sentiment} />
                       <Form.Check.Label>Sentiment</Form.Check.Label>
                     </Form.Check>
-                    <Form.Check id="main_points"  >
-                      <Form.Check.Input type="checkbox" name="main_points" onChange={(e) => setMain_Points(e.target.checked)} />
+                    <Form.Check id="main_points">
+                      <Form.Check.Input type="checkbox" name="main_points" onChange={(e) => setMain_Points(e.target.checked)} checked={main_points} />
                       <Form.Check.Label>Main Points</Form.Check.Label>
                     </Form.Check>
-                    <Form.Check id="action_items" onChange={(e) => setAction_Items(e.target.checked)} >
-                      <Form.Check.Input type="checkbox" name="action_items" />
+                    <Form.Check id="action_items">
+                      <Form.Check.Input type="checkbox" name="action_items" onChange={(e) => setAction_Items(e.target.checked)} checked={action_items}/>
                       <Form.Check.Label>Action Items</Form.Check.Label>
                     </Form.Check>
-                    <Form.Check id="transcript_arguments" onChange={(e) => setTranscript_Arguments(e.target.checked)} >
-                      <Form.Check.Input type="checkbox" name="transcript_arguments" />
+                    <Form.Check id="transcript_arguments">
+                      <Form.Check.Input type="checkbox" name="transcript_arguments" onChange={(e) => setTranscript_Arguments(e.target.checked)} checked={transcript_arguments}/>
                       <Form.Check.Label>Transcript Arguments</Form.Check.Label>
                     </Form.Check>
-                    <Form.Check className="mb-2" id="related_topics" onChange={(e) => setRelated_Topics(e.target.checked)} >
-                      <Form.Check.Input type="checkbox" name="related_topics" />
+                    <Form.Check id="follow_up">
+                      <Form.Check.Input type="checkbox" name="follow_up" onChange={(e) => setFollow_Up(e.target.checked)} checked={follow_up}/>
+                      <Form.Check.Label>Follow Up</Form.Check.Label>
+                    </Form.Check>
+                    <Form.Check className="mb-2" id="related_topics">
+                      <Form.Check.Input type="checkbox" name="related_topics"  onChange={(e) => setRelated_Topics(e.target.checked)} checked={related_topics}/>
                       <Form.Check.Label>Related Topics</Form.Check.Label>
                     </Form.Check>
-                    <input type="text" className="form-control" placeholder="Specific Prompt" id="prompt" required  onChange={(e) => setCustom_Prompt(e.target.value)}/>
+                    {/* <input type="text" className="form-control" placeholder="Specific Prompt" id="prompt" required  onChange={(e) => setCustom_Prompt(e.target.value)}/> */}
                   </Col>
                 </Row>
                 <Row className="mb-6">
