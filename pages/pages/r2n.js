@@ -44,7 +44,7 @@ const R2N = () => {
     formData.append('custom_prompt', custom_prompt);
 
     try {
-      const response = await axios.post('https://33d5-13-213-171-136.ap.ngrok.io/upload', formData, {
+      const response = await axios.post('https://4796-13-213-171-136.ap.ngrok.io/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
