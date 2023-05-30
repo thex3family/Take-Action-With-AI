@@ -334,7 +334,7 @@ const R2N = () => {
                     <Form.Check.Input type="checkbox" name="transcript_arguments" onChange={(e) => setTranscript_Arguments(e.target.checked)} checked={transcript_arguments} />
                     <Form.Check.Label>Transcript Arguments</Form.Check.Label>
                   </Form.Check>
-                  <Form.Check className="mb-2" id="related_topics">
+                  <Form.Check id="related_topics">
                     <Form.Check.Input type="checkbox" name="related_topics" onChange={(e) => setRelated_Topics(e.target.checked)} checked={related_topics} />
                     <Form.Check.Label>Related Topics</Form.Check.Label>
                   </Form.Check>
