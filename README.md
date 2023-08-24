@@ -41,11 +41,11 @@ We welcome contributions to make Take-Action-With-AI even better. To contribute:
 
 ### Contributors
 
-- Co-x3 Family - A Community of Co-Creators and Collaborators
+- [Co-x3 Family](https://x3.family) - A Community of Co-Creators and Collaborators
 
 ## License
 
-Take-Action-With-AI is released under the [MIT License](LICENSE).
+Take-Action-With-AI uses the Commons-Clause and Apache 2.0 licenses [License](LICENSE).
 
 ---
 
